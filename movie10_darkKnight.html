@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="MovieDescpPgStyles.css">
+    <script src="https://kit.fontawesome.com/86bff12df3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="movieDetails">
+        <div class="poster_grid1">
+            <img src="" alt="" height="200px">
+        </div>
+        <div class="grid2">
+            <div class="descp">
+                <h2><b>Movie Title</b></h2>
+                <button>+ Book This Show</button>
+            </div>
+            <div class="details">
+                <p id="g1">Genre 1</p>
+                <p id="g2">Genre 2</p>
+                <i class="fa-regular fa-calendar-days"></i>
+                <p>Year of Release</p>
+                <i class="fa-regular fa-clock"></i>
+                <p>Duration</p>
+                <i class="fa-solid fa-star"></i>
+                <p>Rating</p>
+            </div>
+            <div class="summary">
+            </div>
+            <div class="details2">
+                <p>Country:</p>
+                <p>Genre:</p>
+                <p>Date Release:</p>
+                <p>Production:</p>
+                <p>Cast: </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const movies = [
+            {
+                movieTitle: "The Dark Knight",
+                genres: ["Superhero", "Crime Drama"],
+                yearOfRelease: 2010,
+                duration: "2 hours 32 minutes",
+                rating: 9.0,
+                imgPoster: "inception.jpeg",
+                country: "USA, UK",
+                production: "Warner Bros. Pictures, Legendary Entertainment, Syncopy, DC Comics",
+                cast: "Christian Bale, Heath Ledger, Aaron Eckhart, Michael Caine, Maggie Gyllenhaal, Gary Oldman, Morgan Freeman",
+                moviesummary: "When the menace known as The Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham."
+            }
+        ];
+    
+        function aboutMovie(movie) {
+            document.querySelector('.descp h2').innerText = movie.movieTitle;
+            document.getElementById('g1').innerText = movie.genres[0];
+            document.getElementById('g2').innerText = movie.genres[1];
+            document.querySelector('.poster_grid1 img').src = movie.imgPoster;
+            document.querySelector('.poster_grid1 img').alt = "INCEPTION";
+    
+            const details = document.querySelector('.details');
+            const detailsHTML = `
+                <p id="g1">${movie.genres[0]}</p>
+                <p id="g2">${movie.genres[1]}</p>
+                <i class="fa-regular fa-calendar-days"></i>
+                <p>${movie.yearOfRelease}</p>
+                <i class="fa-regular fa-clock"></i>
+                <p>${movie.duration}</p>
+                <i class="fa-solid fa-star"></i>
+                <p>${movie.rating}</p>
+            `;
+            details.innerHTML = detailsHTML;
+    
+            document.querySelector('.summary').innerText = movie.moviesummary;
+    
+            const details2 = document.querySelector('.details2');
+            const details2HTML = `
+                <p>Country: ${movie.country}</p>
+                <p>Genre: ${movie.genres.join(', ')}</p>
+                <p>Date Release: November 5, ${movie.yearOfRelease}</p>
+                <p>Production: ${movie.production}</p>
+                <p>Cast: ${movie.cast}</p>
+            `;       
+            details2.innerHTML = details2HTML;
+        }
+    
+        document.addEventListener("DOMContentLoaded", function(){
+            aboutMovie(movies[0]);
+        });
+    </script>
+    
