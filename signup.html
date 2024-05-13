@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        #box1{
+            width: 300px;
+            margin: auto;
+            border: 1px solid black;
+            padding: 30px;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        img{
+            padding-left: 25px;
+            padding-top: 10px;
+            padding-bottom: 25px;
+        }
+        button{
+        background-color: red;
+        color: white;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: larger;
+        border-color: black;
+        padding: 10px 116px 10px 116px;
+        }
+        @media only screen and (max-width:600px){
+            #box1{
+                width: auto;
+                overflow: auto;
+            }
+        }
+    </style>
+</head>
+<body style="background-image:url('bg_image.jpg');">
+    <header><img src="logo.png" height="120px" width="120px"></header>
+    <div id="box1">
+        <h2 style="color: rgba(255, 255, 255, 0.8);">Don't have an account?</h2>
+        <br>
+        <form>
+            <input type="text" id="username" name="username" placeholder="Username" size="40"><br><br><br>
+
+            <input type="email" id="email" name="email" placeholder="Email ID" size="40"><br><br><br>
+ 
+            <input type="password" id="pwd" name="pwd" placeholder="Password" size="40"><br><br><br>
+
+            <button onclick="validateForm()">Sign Up</button><br><br>
+
+            <input type="checkbox" id="remember" name="remember" value="Remember me">
+            <label for="remember" style="color: rgba(255, 255, 255, 0.6);"> Remember me </label>
+            
+            <br><br>
+
+            <p style="color: rgba(255, 255, 255, 0.6);">This page is protected by Google reCAPTCHA to ensure you're not a bot.</p>
+    
+        </form>
+    </div>  
+<script>
+    function validateForm() {
+    const username = document.getElementById("username").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("pwd").value;
+
+    // Basic username validation
+    if (!username || username.trim().length === 0) {
+        alert("Please enter a username.");
+        return;
+    }
+
+    // Basic email validation
+    if (!email || !email.includes("@")) {
+        alert("Please enter a valid email address.");
+        return;
+    }
+
+    // Basic password validation
+    if (!password || password.length < 6) {
+        alert("Password must be at least 6 characters.");
+        return;
+    }
+
+    // If validation passes, you can submit the form here
+    // For example, you can send the data to a server using fetch()
+
+    // Clear the form fields after submission (optional)
+    document.getElementById("username").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("pwd").value = "";
+}
+</script>
+</body>
+</html>
