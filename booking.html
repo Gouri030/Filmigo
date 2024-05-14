@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <style>
+        body {
+            background-image: url('booking_bg.jpg');
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            display: flex;
+            flex-direction: column;
+            color: beige;
+            align-items: center;
+            justify-content: center;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        .seat {
+            background-color: rgb(192, 181, 164);
+            height: 40px;
+            width: 40px;
+            margin: 10px;
+            border-radius: 5px;
+            text-align: center;
+            color: black;
+            font-size: larger;
+            align-items: center;
+            cursor: pointer;
+        }
+        .row {
+            display: flex;
+        }
+        .seat.selected{
+            background-color: rgb(57, 183, 114);
+        }
+        .seat.occupied{
+            background-color: rgb(210, 51, 51);
+        }
+        .seat:nth-of-type(4){
+            margin-right: 40px;
+        }
+        .seat:nth-of-type(8){
+            margin-right: 40px;
+        }
+        .status{
+            display: flex;
+            justify-content: space-between;
+            padding: 5px, 10px;
+            list-style-type: none;
+        }
+        .status li{
+            display: flex;
+            align-items: center;
+            margin: 0 10px;
+        }
+        .screen{
+            background-color: rgba(255, 255, 255, 0.9);
+            height: 70px;
+            width: 100%;
+            margin: 15px 0;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.75);
+            transform: rotateX(-45deg);
+        }
+        .container{
+            perspective: 1000px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header><img src="logo.png" height="120px" width="120px"></header>
+    <ul class="status">
+        <li>
+            <div class="seat"></div>
+            <small>N/A</small>
+        </li>
+        <li>
+            <div class="seat selected"></div>
+            <small>SELECTED</small>
+        </li>
+        <li>
+            <div class="seat occupied"></div>
+            <small>OCCUPIED</small>
+        </li>
+    </ul>
+    <div class="container">
+        <div class="screen">
+
+        </div>
+        <div class="row">
+            <div class="seat occupied">1</div>
+            <div class="seat occupied">2</div>
+            <div class="seat occupied">3</div>
+            <div class="seat">4</div>
+            <div class="seat">5</div>
+            <div class="seat">6</div>
+            <div class="seat">7</div>
+            <div class="seat">8</div>
+            <div class="seat">9</div>
+            <div class="seat">10</div>
+            <div class="seat">11</div>
+            <div class="seat">12</div>
+        </div>
+        <div class="row">
+            <div class="seat occupied">1</div>
+            <div class="seat">2</div>
+            <div class="seat occupied">3</div>
+            <div class="seat">4</div>
+            <div class="seat">5</div>
+            <div class="seat">6</div>
+            <div class="seat">7</div>
+            <div class="seat occupied">8</div>
+            <div class="seat">9</div>
+            <div class="seat">10</div>
+            <div class="seat occupied">11</div>
+            <div class="seat">12</div>
+        </div>
+        <div class="row">
+            <div class="seat occupied">1</div>
+            <div class="seat">2</div>
+            <div class="seat occupied">3</div>
+            <div class="seat">4</div>
+            <div class="seat">5</div>
+            <div class="seat">6</div>
+            <div class="seat occupied">7</div>
+            <div class="seat occupied">8</div>
+            <div class="seat occupied">9</div>
+            <div class="seat">10</div>
+            <div class="seat">11</div>
+            <div class="seat occupied">12</div>
+        </div>
+        <div class="row">
+            <div class="seat occupied">1</div>
+            <div class="seat occupied">2</div>
+            <div class="seat occupied">3</div>
+            <div class="seat">4</div>
+            <div class="seat">5</div>
+            <div class="seat">6</div>
+            <div class="seat">7</div>
+            <div class="seat">8</div>
+            <div class="seat">9</div>
+            <div class="seat occupied">10</div>
+            <div class="seat occupied">11</div>
+            <div class="seat occupied">12</div>
+        </div>
+        <div class="row">
+            <div class="seat occupied">1</div>
+            <div class="seat occupied">2</div>
+            <div class="seat">3</div>
+            <div class="seat">4</div>
+            <div class="seat">5</div>
+            <div class="seat">6</div>
+            <div class="seat">7</div>
+            <div class="seat">8</div>
+            <div class="seat">9</div>
+            <div class="seat">10</div>
+            <div class="seat">11</div>
+            <div class="seat">12</div>
+        </div>
+        <div class="row">
+            <div class="seat">1</div>
+            <div class="seat">2</div>
+            <div class="seat">3</div>
+            <div class="seat">4</div>
+            <div class="seat">5</div>
+            <div class="seat">6</div>
+            <div class="seat">7</div>
+            <div class="seat">8</div>
+            <div class="seat">9</div>
+            <div class="seat">10</div>
+            <div class="seat">11</div>
+            <div class="seat">12</div>
+        </div>
+        <div class="row">
+            <div class="seat">1</div>
+            <div class="seat occupied">2</div>
+            <div class="seat">3</div>
+            <div class="seat">4</div>
+            <div class="seat">5</div>
+            <div class="seat occupied">6</div>
+            <div class="seat">7</div>
+            <div class="seat occupied">8</div>
+            <div class="seat occupied">9</div>
+            <div class="seat">10</div>
+            <div class="seat">11</div>
+            <div class="seat occupied">12</div>
+        </div>
+        <div class="row"> 
+            <div class="seat occupied">1</div>
+            <div class="seat occupied">2</div>
+            <div class="seat">3</div>
+            <div class="seat">4</div>
+            <div class="seat">5</div>
+            <div class="seat occupied">6</div>
+            <div class="seat occupied">7</div>
+            <div class="seat occupied">8</div>
+            <div class="seat">9</div>
+            <div class="seat">10</div>
+            <div class="seat occupied">11</div>
+            <div class="seat occupied">12</div>
+        </div>
+    </div>
+</body>
+</html>
