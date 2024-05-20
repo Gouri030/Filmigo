@@ -30,7 +30,6 @@
             <div class="netflix-nav">
               <section>
                 <button onclick="scrollToDiv('home')">Home</button>
-
                 <button onclick="scrollToDiv('topchoices')">Top Choices</button>
                 <button onclick="scrollToDiv('classic')">Classic</button>
                 <button onclick="scrollToDiv('trending')">Trending</button>
@@ -48,16 +47,17 @@
                 <li><a class="dropdown-item" href="#">Movies</a></li>
                 <li><a class="dropdown-item" href="#">Trending</a></li>
                 <li><a class="dropdown-item" href="#">My List</a></li>
-
               </ul>
             </div>
           </div>
-          <div class="right d-flex align-items-center">
-            <i class="bi bi-search"></i>
-            <i class="bi bi-bell-fill"></i>
-            <section class="netflix-profile">inception
 
-            </section>
+          <div class="right d-flex align-items-center">
+            <form class="d-flex search-form" onsubmit="return validateSearch(event)">
+              <input class="form-control search-input me-2" type="search" placeholder="Search" aria-label="Search"
+                required>
+              <button class="btn btn-danger" type="submit">Search</button>
+            </form>
+            <i class="bi bi-bell-fill ms-3"></i>
           </div>
         </div>
       </div>
@@ -701,6 +701,22 @@
 
 
   <script src="./javaScript.js"></script>
+  <script>
+    function validateSearch(event) {
+      event.preventDefault();
+      const searchInput = document.querySelector('.search-input').value;
+      if (searchInput.trim() === '') {
+        alert('Please enter a search term.');
+        return false;
+      }
+      if (searchInput == 'matrix') {
+        window.location.href = 'movie2_theMatrix.html'
+      }
+      // Perform the search action here (e.g., redirect to search results page or fetch search results)
+      console.log('Searching for:', searchInput);
+      return true;
+    }
+  </script>
 </body>
 
 </html>
