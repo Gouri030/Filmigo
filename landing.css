@@ -190,17 +190,17 @@ i{
 }
 
 .card{
-    width: 250px;
+    max-width: 300px;
     background-color: #141414;
     border-radius: 4px;
     transition: 0.2s linear;
-    margin: 3px;
+    margin: 10px;
     position: relative;
 }
 
 
 .card:hover{
-    transform: scaleX(1.4) scaleY(1.4);
+    transform: scaleX(1.1) scaleY(1.1);
     z-index: 10;
 }
 

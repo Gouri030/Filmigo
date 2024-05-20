@@ -48,21 +48,21 @@
                 yearOfRelease: 1999,
                 duration: "2 hours 19 minutes",
                 rating: 8.8,
-                imgPoster: "fighter club.jpeg",
+                imgPoster: "./description_pg_imgs/fighter club.jpeg",
                 country: "USA, Germany",
                 production: "Fox 2000 Pictures, Regency Enterprises, Linson Films, Atman Entertainment",
                 cast: "Brad Pitt, Edward Norton, Helena Bonham Carter, Meat Loaf, Jared Leto, Zach Grenier, Holt McCallany",
                 moviesummary: "An insomniac office worker and a devil-may-care soapmaker form an underground fight club that evolves into something much, much more."
             }
         ];
-    
+
         function aboutMovie(movie) {
             document.querySelector('.descp h2').innerText = movie.movieTitle;
             document.getElementById('g1').innerText = movie.genres[0];
             document.getElementById('g2').innerText = movie.genres[1];
             document.querySelector('.poster_grid1 img').src = movie.imgPoster;
             document.querySelector('.poster_grid1 img').alt = "INCEPTION";
-    
+
             const details = document.querySelector('.details');
             const detailsHTML = `
                 <p id="g1">${movie.genres[0]}</p>
@@ -75,9 +75,9 @@
                 <p>${movie.rating}</p>
             `;
             details.innerHTML = detailsHTML;
-    
+
             document.querySelector('.summary').innerText = movie.moviesummary;
-    
+
             const details2 = document.querySelector('.details2');
             const details2HTML = `
                 <p>Country: ${movie.country}</p>
@@ -85,12 +85,11 @@
                 <p>Date Release: November 5, ${movie.yearOfRelease}</p>
                 <p>Production: ${movie.production}</p>
                 <p>Cast: ${movie.cast}</p>
-            `;       
+            `;
             details2.innerHTML = details2HTML;
         }
-    
-        document.addEventListener("DOMContentLoaded", function(){
+
+        document.addEventListener("DOMContentLoaded", function () {
             aboutMovie(movies[0]);
         });
     </script>
-    

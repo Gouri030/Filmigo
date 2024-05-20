@@ -1,21 +1,24 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
-    <!-- Required meta tagss for new branch -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="images/netflix_logo_icon_170919.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="./landing.css">
-    <link rel="stylesheet" href="./responsive.css">
-    <title>Neflix</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  </head>
-  <body>
-    
-    <div style="position: relative;">
+
+<head>
+  <!-- Required meta tagss for new branch -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="images/netflix_logo_icon_170919.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="./landing.css">
+  <link rel="stylesheet" href="./responsive.css">
+  <title>Neflix</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+
+  <div style="position: relative;">
     <!-- header -->
     <nav class="navbar navbar-expand-md netflix-navbar netflix-padding-left netflix-padding-right  border border-1">
       <div class="container-fluid">
@@ -24,18 +27,19 @@
             <a class="navbar-brand" href="#">
               <img src="./images/logo.png" alt="">
             </a>
-            <div  class="netflix-nav">
-               <section>
-                  <button>Home</button>
-                  <button>TV Shows</button>
-                  <button>Movies</button>
-                  <button>Trending</button>
-                  <button>My List</button>
-                  <button>Browse by Language</button>
-               </section>
+            <div class="netflix-nav">
+              <section>
+                <button onclick="scrollToDiv('home')">Home</button>
+
+                <button onclick="scrollToDiv('topchoices')">Top Choices</button>
+                <button onclick="scrollToDiv('classic')">Classic</button>
+                <button onclick="scrollToDiv('trending')">Trending</button>
+                <button>Browse by Language</button>
+              </section>
             </div>
             <div class="netflix-dropdown-box dropdown">
-              <button class="netflix-dropdown dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              <button class="netflix-dropdown dropdown-toggle" type="button" id="dropdownMenuButton1"
+                data-bs-toggle="dropdown" aria-expanded="true">
                 Browse
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -44,14 +48,14 @@
                 <li><a class="dropdown-item" href="#">Movies</a></li>
                 <li><a class="dropdown-item" href="#">Trending</a></li>
                 <li><a class="dropdown-item" href="#">My List</a></li>
-                <li><a class="dropdown-item" href="#">Browse by Language</a></li>
+
               </ul>
             </div>
           </div>
           <div class="right d-flex align-items-center">
             <i class="bi bi-search"></i>
             <i class="bi bi-bell-fill"></i>
-            <section class="netflix-profile">
+            <section class="netflix-profile">inception
 
             </section>
           </div>
@@ -65,578 +69,638 @@
     <!-- video -->
     <div class="">
       <section class="netflix-home-video">
-         <div class="top"></div>
-         <div class="bottom"></div>
-         <video src="./video/video.mp4" autoplay loop></video>
-         <div class="content">
-            <section class="left">
-               <img src="./images/image2.png" alt="">
-               <div class="d-flex mt-2">
-                  <button  class="btn btn-light m-2" > <i class="bi bi-play-fill" style="color: black; padding: 0%;"></i> Watch Now </button>
-                  <button class="btn btn-secondary m-2"><i class="bi bi-info-circle" style=" padding: 0%;"></i> More Information</button>
-               </div>
-            </section>
-         </div>
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <video src="./video/video.mp4" autoplay loop></video>
+        <div class="content">
+          <section class="left">
+            <img src="./images/image2.png" alt="">
+            <div class="d-flex mt-2">
+              <button class="btn btn-light m-2"> <i class="bi bi-play-fill" style="color: black; padding: 0%;"></i>
+                Watch Now </button>
+              <button class="btn btn-secondary m-2"><i class="bi bi-info-circle" style=" padding: 0%;"></i> More
+                Information</button>
+            </div>
+          </section>
+        </div>
       </section>
-   </div>
-   
+    </div>
+
     <!-- video -->
 
-      <!-- sliders -->
-      <div class="slider-box">
-        <div class="container-fluid slider">
-          <section class="d-flex justify-content-between margin-right">
-            <p class="text-white"> <b>Top choices for you</b> </p>
-            <div class="">
-              <button  type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active tab-change-btn" aria-current="true" aria-label="Slide 1"></button>
-              <button class="tab-change-btn" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button class="tab-change-btn" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <!-- sliders -->
+    <div class="slider-box">
+      <div class="container-fluid slider" id="topchoices">
+        <section class="d-flex justify-content-between margin-right">
+          <p class="text-white"> <b>Top choices for you</b> </p>
+          <div class="">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+              class="active tab-change-btn" aria-current="true" aria-label="Slide 1"></button>
+            <button class="tab-change-btn" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button class="tab-change-btn" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+        </section>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+          <div class="carousel-inner" style="position: relative; overflow: visible;">
+            <div class="carousel-item active">
+              <section class="d-flex">
+                <div onclick="window.location.href = 'movie1_inception.html';" class="card">
+                  <img src="inception.jpeg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <section class="d-flex justify-content-between">
+                      <div>
+                        <i class="bi bi-play-circle-fill card-icon"></i>
+                        <i class="bi bi-plus-circle card-icon"></i>
+                      </div>
+                      <div>
+                        <i class="bi bi-arrow-down-circle card-icon"></i>
+                      </div>
+                    </section>
+                    <section class="d-flex align-items-center justify-content-between">
+                      <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% Relevent</p>
+                      <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                        class="border netflix-card-text p-1 text-white">HD</span>
+
+                    </section>
+                    <span class="netflix-card-text text-white">Romance • Drama • Korea</span>
+                  </div>
+                </div>
+                <div onclick="window.location.href = 'movie2_theMatrix.html';" class="card">
+                  <img src="./description_pg_imgs/matrix.jpeg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <section class="d-flex justify-content-between">
+                      <div>
+                        <i class="bi bi-play-circle-fill card-icon"></i>
+                        <i class="bi bi-plus-circle card-icon"></i>
+                      </div>
+                      <div>
+                        <i class="bi bi-arrow-down-circle card-icon"></i>
+                      </div>
+                    </section>
+                    <section class="d-flex align-items-center justify-content-between">
+                      <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% Relevent </p>
+                      <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                        class="border netflix-card-text p-1 text-white">HD</span>
+
+                    </section>
+                    <span class="netflix-card-text text-white">Romance • Drama • Korea</span>
+                  </div>
+                </div>
+                <div onclick="window.location.href = 'movie3_interstellar.html';" class="card">
+                  <img src="interstellar.jpeg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <section class="d-flex justify-content-between">
+                      <div>
+                        <i class="bi bi-play-circle-fill card-icon"></i>
+                        <i class="bi bi-plus-circle card-icon"></i>
+                      </div>
+                      <div>
+                        <i class="bi bi-arrow-down-circle card-icon"></i>
+                      </div>
+                    </section>
+                    <section class="d-flex align-items-center justify-content-between">
+                      <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% Relevent</p>
+                      <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                        class="border netflix-card-text p-1 text-white">HD</span>
+                    </section>
+                    <span class="netflix-card-text text-white">Romance • Drama • Korea</span>
+                  </div>
+                  <div class="card-body">
+                    <section class="d-flex justify-content-between">
+                      <div>
+                        <i class="bi bi-play-circle-fill card-icon"></i>
+                        <i class="bi bi-plus-circle card-icon"></i>
+                      </div>
+                      <div>
+                        <i class="bi bi-arrow-down-circle card-icon"></i>
+                      </div>
+                    </section>
+                    <section class="d-flex align-items-center justify-content-between">
+                      <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% Relevent</p>
+                      <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                        class="border netflix-card-text p-1 text-white">HD</span>
+
+                    </section>
+                    <span class="netflix-card-text text-white">Romance • Drama • Korea</span>
+                  </div>
+                </div>
+                <div onclick="window.location.href = 'movie4_lordOfTheRings.html';" class="card">
+                  <img src="/description_pg_imgs/Lord-Of-The-Rings.jpeg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <section class="d-flex justify-content-between">
+                      <div>
+                        <i class="bi bi-play-circle-fill card-icon"></i>
+                        <i class="bi bi-plus-circle card-icon"></i>
+                      </div>
+                      <div>
+                        <i class="bi bi-arrow-down-circle card-icon"></i>
+                      </div>
+                    </section>
+                    <section class="d-flex align-items-center justify-content-between">
+                      <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% Relevent</p>
+                      <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                        class="border netflix-card-text p-1 text-white">HD</span>
+
+                    </section>
+                    <span class="netflix-card-text text-white">Romance • Drama • Korea</span>
+                  </div>
+                </div>
+                <div onclick="window.location.href = 'movie5_pulpFiction.html';" class="card">
+                  <img src="/description_pg_imgs/pulp-fiction.jpeg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <section class="d-flex justify-content-between">
+                      <div>
+                        <i class="bi bi-play-circle-fill card-icon"></i>
+                        <i class="bi bi-plus-circle card-icon"></i>
+                      </div>
+                      <div>
+                        <i class="bi bi-arrow-down-circle card-icon"></i>
+                      </div>
+                    </section>
+                    <section class="d-flex align-items-center justify-content-between">
+                      <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% Relevent</p>
+                      <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                        class="border netflix-card-text p-1 text-white">HD</span>
+
+                    </section>
+                    <span class="netflix-card-text text-white">Romance • Drama • Korea</span>
+                  </div>
+                </div>
+                <div onclick="window.location.href = 'movie6_forrestGump.html';" class="card">
+                  <img src="./description_pg_imgs/forest gump.jpeg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <section class="d-flex justify-content-between">
+                      <div>
+                        <i class="bi bi-play-circle-fill card-icon"></i>
+                        <i class="bi bi-plus-circle card-icon"></i>
+                      </div>
+                      <div>
+                        <i class="bi bi-arrow-down-circle card-icon"></i>
+                      </div>
+                    </section>
+                    <section class="d-flex align-items-center justify-content-between">
+                      <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% Relevent</p>
+                      <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                        class="border netflix-card-text p-1 text-white">HD</span>
+
+                    </section>
+                    <span class="netflix-card-text text-white">Romance • Drama • Korea</span>
+                  </div>
+                </div>
+              </section>
             </div>
-          </section>
-          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-            
-            <div class="carousel-inner" style="position: relative; overflow: visible;">
-              <div class="carousel-item active">
-                <section class="d-flex">
-                  <div  onclick="window.location.href = 'index.html';" class="card" >
-                    <img src="./images/trending/img1.jpg" class="card-img-top" alt="...">
-                    <div class="card-body"> 
-                        <section class="d-flex justify-content-between">
-                          <div>
-                            <i class="bi bi-play-circle-fill card-icon"></i>
-                            <i  class="bi bi-plus-circle card-icon"></i>
-                          </div>
-                          <div>
-                            <i class="bi bi-arrow-down-circle card-icon"></i>
-                          </div>
-                        </section>
-                        <section class="d-flex align-items-center justify-content-between" >
-                           <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% Relevent</p> 
-                             <span class="m-2 netflix-card-text text-white">Limited Series</span> <span class="border netflix-card-text p-1 text-white">HD</span>
-                          
-                          </section>
-                          <span class="netflix-card-text text-white">Romance • Drama • Korea</span>
-                    </div>
+
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="container-fluid  slide2" id="classic">
+        <section class="d-flex justify-content-between margin-right margin-title">
+          <p class="text-white"> <b>Classic</b> </p>
+          <div class="">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+              class="active tab-change-btn" aria-current="true" aria-label="Slide 1"></button>
+            <button class="tab-change-btn" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button class="tab-change-btn" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+        </section>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+          <div class="carousel-inner" style="position: relative; overflow: visible;">
+            <div class="carousel-item active">
+              <section class="d-flex">
+                <div onclick="window.location.href = 'movie7_shawshankRedemption.html';" class="card">
+                  <img src="./description_pg_imgs/shawshankredemption.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <section class="d-flex justify-content-between">
+                      <div>
+                        <i class="bi bi-play-circle-fill card-icon"></i>
+                        <i class="bi bi-plus-circle card-icon"></i>
+                      </div>
+                      <div>
+                        <i class="bi bi-arrow-down-circle card-icon"></i>
+                      </div>
+                    </section>
+                    <section class="d-flex align-items-center justify-content-between">
+                      <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% Relevent</p>
+                      <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                        class="border netflix-card-text p-1 text-white">HD</span>
+
+                    </section>
+                    <span class="netflix-card-text text-white">Romance • Drama • Japan</span>
                   </div>
-                  <div class="card">
-                    <img src="./images/trending/img2.jpg" class="card-img-top" alt="...">
-                    <div class="card-body"> 
-                      <section class="d-flex justify-content-between">
-                        <div>
-                          <i class="bi bi-play-circle-fill card-icon"  ></i>
-                          <i  class="bi bi-plus-circle card-icon"></i>
-                        </div>
-                        <div>
-                          <i class="bi bi-arrow-down-circle card-icon"></i>
-                        </div>
-                      </section>
-                      <section class="d-flex align-items-center justify-content-between" >
-                         <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% Relevent </p> 
-                           <span class="m-2 netflix-card-text text-white">Limited Series</span> <span class="border netflix-card-text p-1 text-white">HD</span>
-                        
-                        </section>
-                        <span class="netflix-card-text text-white">Romance • Drama • Korea</span>
+                </div>
+                <div onclick="window.location.href='movie8_godFather.html';" class="card">
+                  <img src="./description_pg_imgs/the god father.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <section class="d-flex justify-content-between">
+                      <div>
+                        <i class="bi bi-play-circle-fill card-icon"></i>
+                        <i class="bi bi-plus-circle card-icon"></i>
+                      </div>
+                      <div>
+                        <i class="bi bi-arrow-down-circle card-icon"></i>
+                      </div>
+                    </section>
+                    <section class="d-flex align-items-center justify-content-between">
+                      <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% Relevent</p>
+                      <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                        class="border netflix-card-text p-1 text-white">HD</span>
+
+                    </section>
+                    <span class="netflix-card-text text-white">Romance • Drama • Japan</span>
                   </div>
+                </div>
+                <div onclick="window.location.href='movie9_fightClub.html';" class="card">
+                  <img src="./description_pg_imgs/fighter club.jpeg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <section class="d-flex justify-content-between">
+                      <div>
+                        <i class="bi bi-play-circle-fill card-icon"></i>
+                        <i class="bi bi-plus-circle card-icon"></i>
+                      </div>
+                      <div>
+                        <i class="bi bi-arrow-down-circle card-icon"></i>
+                      </div>
+                    </section>
+                    <section class="d-flex align-items-center justify-content-between">
+                      <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% Relevent</p>
+                      <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                        class="border netflix-card-text p-1 text-white">HD</span>
+
+                    </section>
+                    <span class="netflix-card-text text-white">Romance • Drama • Japan</span>
                   </div>
-                  <div class="card">
-                    <img src="./images/trending/img3.jpg" class="card-img-top" alt="...">
-                    <div class="card-body"> 
-                      <section class="d-flex justify-content-between">
-                        <div>
-                          <i class="bi bi-play-circle-fill card-icon"></i>
-                          <i  class="bi bi-plus-circle card-icon"></i>
-                        </div>
-                        <div>
-                          <i class="bi bi-arrow-down-circle card-icon"></i>
-                        </div>
-                      </section>
-                      <section class="d-flex align-items-center justify-content-between" >
-                         <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% Relevent</p> 
-                           <span class="m-2 netflix-card-text text-white">Limited Series</span> <span class="border netflix-card-text p-1 text-white">HD</span>
-                        </section>
-                        <span class="netflix-card-text text-white">Romance • Drama • Korea</span>
-                  </div> <div class="card-body"> 
-                        <section class="d-flex justify-content-between">
-                          <div>
-                            <i class="bi bi-play-circle-fill card-icon"  ></i>
-                            <i  class="bi bi-plus-circle card-icon"></i>
-                          </div>
-                          <div>
-                            <i class="bi bi-arrow-down-circle card-icon"></i>
-                          </div>
-                        </section>
-                        <section class="d-flex align-items-center justify-content-between" >
-                           <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% Relevent</p> 
-                             <span class="m-2 netflix-card-text text-white">Limited Series</span> <span class="border netflix-card-text p-1 text-white">HD</span>
-                          
-                          </section>
-                          <span class="netflix-card-text text-white">Romance • Drama • Korea</span>
-                    </div>
+                  <div class="card-body">
+                    <section class="d-flex justify-content-between">
+                      <div>
+                        <i class="bi bi-play-circle-fill card-icon"></i>
+                        <i class="bi bi-plus-circle card-icon"></i>
+                      </div>
+                      <div>
+                        <i class="bi bi-arrow-down-circle card-icon"></i>
+                      </div>
+                    </section>
+                    <section class="d-flex align-items-center justify-content-between">
+                      <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% Relevent</p>
+                      <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                        class="border netflix-card-text p-1 text-white">HD</span>
+
+                    </section>
+                    <span class="netflix-card-text text-white">Romance • Drama • Japan</span>
                   </div>
-                  <div class="card" >
-                    <img src="./images/trending/img4.jpg" class="card-img-top" alt="...">
-                    <div class="card-body"> 
-                      <section class="d-flex justify-content-between">
-                        <div>
-                          <i class="bi bi-play-circle-fill card-icon"></i>
-                          <i  class="bi bi-plus-circle card-icon"></i>
-                        </div>
-                        <div>
-                          <i class="bi bi-arrow-down-circle card-icon"></i>
-                        </div>
-                      </section>
-                      <section class="d-flex align-items-center justify-content-between" >
-                         <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% Relevent</p> 
-                           <span class="m-2 netflix-card-text text-white">Limited Series</span> <span class="border netflix-card-text p-1 text-white">HD</span>
-                        
-                        </section>
-                        <span class="netflix-card-text text-white">Romance • Drama • Korea</span>
+                </div>
+                <div onclick="window.location.href='movie10_darkKnight.html';" class="card">
+                  <img src="./description_pg_imgs/dark knight.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <section class="d-flex justify-content-between">
+                      <div>
+                        <i class="bi bi-play-circle-fill card-icon"></i>
+                        <i class="bi bi-plus-circle card-icon"></i>
+                      </div>
+                      <div>
+                        <i class="bi bi-arrow-down-circle card-icon"></i>
+                      </div>
+                    </section>
+                    <section class="d-flex align-items-center justify-content-between">
+                      <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% Relevent</p>
+                      <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                        class="border netflix-card-text p-1 text-white">HD</span>
+
+                    </section>
+                    <span class="netflix-card-text text-white">Romance • Drama • Japan</span>
                   </div>
+                </div>
+                <div onclick="window.location.href='movie11_theIrishMan.html';" class="card">
+                  <img src="./description_pg_imgs/irishman.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <section class="d-flex justify-content-between">
+                      <div>
+                        <i class="bi bi-play-circle-fill card-icon"></i>
+                        <i class="bi bi-plus-circle card-icon"></i>
+                      </div>
+                      <div>
+                        <i class="bi bi-arrow-down-circle card-icon"></i>
+                      </div>
+                    </section>
+                    <section class="d-flex align-items-center justify-content-between">
+                      <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% Relevent </p>
+                      <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                        class="border netflix-card-text p-1 text-white">HD</span>
+
+                    </section>
+                    <span class="netflix-card-text text-white">Romance • Drama • Japan</span>
                   </div>
-                  <div class="card" >
-                    <img src="./images/trending/img5.jpg" class="card-img-top" alt="...">
-                    <div class="card-body"> 
-                      <section class="d-flex justify-content-between">
-                        <div>
-                          <i class="bi bi-play-circle-fill card-icon"  ></i>
-                          <i  class="bi bi-plus-circle card-icon"></i>
-                        </div>
-                        <div>
-                          <i class="bi bi-arrow-down-circle card-icon"></i>
-                        </div>
-                      </section>
-                      <section class="d-flex align-items-center justify-content-between" >
-                         <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% Relevent</p> 
-                           <span class="m-2 netflix-card-text text-white">Limited Series</span> <span class="border netflix-card-text p-1 text-white">HD</span>
-                        
-                        </section>
-                        <span class="netflix-card-text text-white">Romance • Drama • Korea</span>
+                </div>
+                <div onclick="window.location.href='movie12_MarriageStory.html';" class="card">
+                  <img src="./description_pg_imgs/marriage-story.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <section class="d-flex justify-content-between">
+                      <div>
+                        <i class="bi bi-play-circle-fill card-icon"></i>
+                        <i class="bi bi-plus-circle card-icon"></i>
+                      </div>
+                      <div>
+                        <i class="bi bi-arrow-down-circle card-icon"></i>
+                      </div>
+                    </section>
+                    <section class="d-flex align-items-center justify-content-between">
+                      <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% Relevent</p>
+                      <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                        class="border netflix-card-text p-1 text-white">HD</span>
+
+                    </section>
+                    <span class="netflix-card-text text-white">Romance • Drama • Japan</span>
                   </div>
-                  </div>
-                  <div class="card" >
-                    <img src="./images/trending/img6.jpg" class="card-img-top" alt="...">
-                    <div class="card-body"> 
-                      <section class="d-flex justify-content-between">
-                        <div>
-                          <i class="bi bi-play-circle-fill card-icon"></i>
-                          <i  class="bi bi-plus-circle card-icon"></i>
-                        </div>
-                        <div>
-                          <i class="bi bi-arrow-down-circle card-icon"></i>
-                        </div>
-                      </section>
-                      <section class="d-flex align-items-center justify-content-between" >
-                         <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% Relevent</p> 
-                           <span class="m-2 netflix-card-text text-white">Limited Series</span> <span class="border netflix-card-text p-1 text-white">HD</span>
-                        
-                        </section>
-                        <span class="netflix-card-text text-white">Romance • Drama • Korea</span>
-                  </div>
-                  </div>
-                </section>
-              </div>
-             
+                </div>
+              </section>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden ">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next
+            </span>
+          </button>
+        </div>
+      </div>
+      <div class="container-fluid  slide3" id="trending">
+        <section class="d-flex justify-content-between margin-right margin-title2">
+          <p class="text-white"> <b>Trending</b> </p>
+          <div class="">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+              class="active tab-change-btn" aria-current="true" aria-label="Slide 1"></button>
+            <button class="tab-change-btn" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button class="tab-change-btn" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+        </section>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+          <div class="carousel-inner" style="position: relative; overflow: visible;">
+            <div class="carousel-item active">
+              <section class="d-flex ">
+                <div onclick="window.location.href='movie13_Extraction.html';" class="card">
+                  <img src="./description_pg_imgs/extraction.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <section class="d-flex justify-content-between">
+                      <div>
+                        <i class="bi bi-play-circle-fill card-icon"></i>
+                        <i class="bi bi-plus-circle card-icon"></i>
+                      </div>
+                      <div>
+                        <i class="bi bi-arrow-down-circle card-icon"></i>
+                      </div>
+                    </section>
+                    <section class="d-flex align-items-center justify-content-between">
+                      <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% Relevent</p>
+                      <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                        class="border netflix-card-text p-1 text-white">HD</span>
+
+                    </section>
+                    <span class="netflix-card-text text-white">Romance • Drama • Comédia</span>
+                  </div>
+                </div>
+                <div onclick="window.location.href='movie14_BirdBox.html';" class="card">
+                  <img src="./description_pg_imgs/birdbox.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <section class="d-flex justify-content-between">
+                      <div>
+                        <i class="bi bi-play-circle-fill card-icon"></i>
+                        <i class="bi bi-plus-circle card-icon"></i>
+                      </div>
+                      <div>
+                        <i class="bi bi-arrow-down-circle card-icon"></i>
+                      </div>
+                    </section>
+                    <section class="d-flex align-items-center justify-content-between">
+                      <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% Relevent</p>
+                      <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                        class="border netflix-card-text p-1 text-white">HD</span>
+
+                    </section>
+                    <span class="netflix-card-text text-white">Romance • Drama • Comédia</span>
+                  </div>
+                </div>
+                <div onclick="window.location.href='movie15_theTrialOfTheChicago7.html';" class="card">
+                  <img src="./description_pg_imgs/chicago.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <section class="d-flex justify-content-between">
+                      <div>
+                        <i class="bi bi-play-circle-fill card-icon"></i>
+                        <i class="bi bi-plus-circle card-icon"></i>
+                      </div>
+                      <div>
+                        <i class="bi bi-arrow-down-circle card-icon"></i>
+                      </div>
+                    </section>
+                    <section class="d-flex align-items-center justify-content-between">
+                      <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% Relevent</p>
+                      <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                        class="border netflix-card-text p-1 text-white">HD</span>
+
+                    </section>
+                    <span class="netflix-card-text text-white">Romance • Drama • Comédia</span>
+                  </div>
+                  <div class="card-body">
+                    <section class="d-flex justify-content-between">
+                      <div>
+                        <i class="bi bi-play-circle-fill card-icon"></i>
+                        <i class="bi bi-plus-circle card-icon"></i>
+                      </div>
+                      <div>
+                        <i class="bi bi-arrow-down-circle card-icon"></i>
+                      </div>
+                    </section>
+                    <section class="d-flex align-items-center justify-content-between">
+                      <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% Relevent</p>
+                      <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                        class="border netflix-card-text p-1 text-white">HD</span>
+
+                    </section>
+                    <span class="netflix-card-text text-white">Romance • Drama • Comédia</span>
+                  </div>
+                </div>
+                <div onclick="window.location.href='movie16_ToAllDBoysIHvlovedaBfr.html';" class="card">
+                  <img src="./description_pg_imgs/boys.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <section class="d-flex justify-content-between">
+                      <div>
+                        <i class="bi bi-play-circle-fill card-icon"></i>
+                        <i class="bi bi-plus-circle card-icon"></i>
+                      </div>
+                      <div>
+                        <i class="bi bi-arrow-down-circle card-icon"></i>
+                      </div>
+                    </section>
+                    <section class="d-flex align-items-center justify-content-between">
+                      <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% Relevent</p>
+                      <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                        class="border netflix-card-text p-1 text-white">HD</span>
+
+                    </section>
+                    <span class="netflix-card-text text-white">Romance • Drama • Comédia</span>
+                  </div>
+                </div>
+                <div onclick="window.location.href='movie17_OldGuard.html';" class="card">
+                  <img src="./description_pg_imgs/old-guard.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <section class="d-flex justify-content-between">
+                      <div>
+                        <i class="bi bi-play-circle-fill card-icon"></i>
+                        <i class="bi bi-plus-circle card-icon"></i>
+                      </div>
+                      <div>
+                        <i class="bi bi-arrow-down-circle card-icon"></i>
+                      </div>
+                    </section>
+                    <section class="d-flex align-items-center justify-content-between">
+                      <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% Relevent</p>
+                      <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                        class="border netflix-card-text p-1 text-white">HD</span>
+
+                    </section>
+                    <span class="netflix-card-text text-white">Romance • Drama • Comédia</span>
+                  </div>
+                </div>
+                <div onclick="window.location.href='movie18_3Idiots.html';" class="card">
+                  <img src="./description_pg_imgs/3idiots.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <section class="d-flex justify-content-between">
+                      <div>
+                        <i class="bi bi-play-circle-fill card-icon"></i>
+                        <i class="bi bi-plus-circle card-icon"></i>
+                      </div>
+                      <div>
+                        <i class="bi bi-arrow-down-circle card-icon"></i>
+                      </div>
+                    </section>
+                    <section class="d-flex align-items-center justify-content-between">
+                      <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% Relevent</p>
+                      <span class="m-2 netflix-card-text text-white">Limited Series</span> <span
+                        class="border netflix-card-text p-1 text-white">HD</span>
+
+                    </section>
+                    <span class="netflix-card-text text-white">Romance • Drama • Comédia</span>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Forecast</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="container-fluid new-movies-section">
+        <section>
+          <p class="text-white"> <b>Newly Added Movies</b> </p>
+
+        </section>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+          <div class="carousel-inner-new" style="position: relative; overflow: visible;">
           </div>
         </div>
-        <div class="container-fluid  slide2">
-          <section class="d-flex justify-content-between margin-right margin-title">
-            <p class="text-white"> <b>Animes</b> </p>
-            <div class="">
-              <button  type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active tab-change-btn" aria-current="true" aria-label="Slide 1"></button>
-              <button class="tab-change-btn" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button class="tab-change-btn" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+
+      </div>
+    </div>
+    <!-- sliders-end -->
+
+    <!-- New movies section -->
+    <div id="newMovies" class="row"></div>
+
+
+
+    <!-- footer  -->
+    <div class="container footer">
+      <div class="row">
+        <div class="col-md-10 mx-auto">
+          <div class="row">
+            <div class="col-md-3">
+              <ul>
+                <li>Audio and Subtitles</li>
+                <li>Media Center</li>
+                <li>Privacy</li>
+                <li>Contact</li>
+              </ul>
             </div>
-          </section>
-          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-            
-            <div class="carousel-inner" style="position: relative; overflow: visible;">
-              <div class="carousel-item active">
-                <section class="d-flex" >
-                  <div class="card" >
-                    <img src="./images/anime/img1.webp" class="card-img-top" alt="...">
-                    <div class="card-body"> 
-                        <section class="d-flex justify-content-between">
-                          <div>
-                            <i class="bi bi-play-circle-fill card-icon"></i>
-                            <i  class="bi bi-plus-circle card-icon"></i>
-                          </div>
-                          <div>
-                            <i class="bi bi-arrow-down-circle card-icon"></i>
-                          </div>
-                        </section>
-                        <section class="d-flex align-items-center justify-content-between" >
-                           <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% Relevent</p> 
-                             <span class="m-2 netflix-card-text text-white">Limited Series</span> <span class="border netflix-card-text p-1 text-white">HD</span>
-                          
-                          </section>
-                          <span class="netflix-card-text text-white">Romance • Drama • Japan</span>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <img src="./images/anime/img2.webp" class="card-img-top" alt="...">
-                    <div class="card-body"> 
-                      <section class="d-flex justify-content-between">
-                        <div>
-                          <i class="bi bi-play-circle-fill card-icon"  ></i>
-                          <i  class="bi bi-plus-circle card-icon"></i>
-                        </div>
-                        <div>
-                          <i class="bi bi-arrow-down-circle card-icon"></i>
-                        </div>
-                      </section>
-                      <section class="d-flex align-items-center justify-content-between" >
-                         <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% Relevent</p> 
-                           <span class="m-2 netflix-card-text text-white">Limited Series</span> <span class="border netflix-card-text p-1 text-white">HD</span>
-                        
-                        </section>
-                        <span class="netflix-card-text text-white">Romance • Drama • Japan</span>
-                  </div>
-                  </div>
-                  <div class="card">
-                    <img src="./images/anime/imga3.jpg" class="card-img-top" alt="...">
-                    <div class="card-body"> 
-                      <section class="d-flex justify-content-between">
-                        <div>
-                          <i class="bi bi-play-circle-fill card-icon"></i>
-                          <i  class="bi bi-plus-circle card-icon"></i>
-                        </div>
-                        <div>
-                          <i class="bi bi-arrow-down-circle card-icon"></i>
-                        </div>
-                      </section>
-                      <section class="d-flex align-items-center justify-content-between" >
-                         <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% Relevent</p> 
-                           <span class="m-2 netflix-card-text text-white">Limited Series</span> <span class="border netflix-card-text p-1 text-white">HD</span>
-                        
-                        </section>
-                        <span class="netflix-card-text text-white">Romance • Drama • Japan</span>
-                  </div> <div class="card-body"> 
-                        <section class="d-flex justify-content-between">
-                          <div>
-                            <i class="bi bi-play-circle-fill card-icon"  ></i>
-                            <i  class="bi bi-plus-circle card-icon"></i>
-                          </div>
-                          <div>
-                            <i class="bi bi-arrow-down-circle card-icon"></i>
-                          </div>
-                        </section>
-                        <section class="d-flex align-items-center justify-content-between" >
-                           <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% Relevent</p> 
-                             <span class="m-2 netflix-card-text text-white">Limited Series</span> <span class="border netflix-card-text p-1 text-white">HD</span>
-                          
-                          </section>
-                          <span class="netflix-card-text text-white">Romance • Drama • Japan</span>
-                    </div>
-                  </div>
-                  <div class="card" >
-                    <img src="./images/anime/img4.webp" class="card-img-top" alt="...">
-                    <div class="card-body"> 
-                      <section class="d-flex justify-content-between">
-                        <div>
-                          <i class="bi bi-play-circle-fill card-icon"></i>
-                          <i  class="bi bi-plus-circle card-icon"></i>
-                        </div>
-                        <div>
-                          <i class="bi bi-arrow-down-circle card-icon"></i>
-                        </div>
-                      </section>
-                      <section class="d-flex align-items-center justify-content-between" >
-                         <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% Relevent</p> 
-                           <span class="m-2 netflix-card-text text-white">Limited Series</span> <span class="border netflix-card-text p-1 text-white">HD</span>
-                        
-                        </section>
-                        <span class="netflix-card-text text-white">Romance • Drama • Japan</span>
-                  </div>
-                  </div>
-                  <div class="card" >
-                    <img src="./images/anime/img5.webp" class="card-img-top" alt="...">
-                    <div class="card-body"> 
-                      <section class="d-flex justify-content-between">
-                        <div>
-                          <i class="bi bi-play-circle-fill card-icon"></i>
-                          <i  class="bi bi-plus-circle card-icon"></i>
-                        </div>
-                        <div>
-                          <i class="bi bi-arrow-down-circle card-icon"></i>
-                        </div>
-                      </section>
-                      <section class="d-flex align-items-center justify-content-between" >
-                         <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% Relevent </p> 
-                           <span class="m-2 netflix-card-text text-white">Limited Series</span> <span class="border netflix-card-text p-1 text-white">HD</span>
-                        
-                        </section>
-                        <span class="netflix-card-text text-white">Romance • Drama • Japan</span>
-                  </div>
-                  </div>
-                  <div class="card" >
-                    <img src="./images/anime/img6.webp" class="card-img-top" alt="...">
-                    <div class="card-body"> 
-                      <section class="d-flex justify-content-between">
-                        <div>
-                          <i class="bi bi-play-circle-fill card-icon"></i>
-                          <i  class="bi bi-plus-circle card-icon"></i>
-                        </div>
-                        <div>
-                          <i class="bi bi-arrow-down-circle card-icon"></i>
-                        </div>
-                      </section>
-                      <section class="d-flex align-items-center justify-content-between" >
-                         <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% Relevent</p> 
-                           <span class="m-2 netflix-card-text text-white">Limited Series</span> <span class="border netflix-card-text p-1 text-white">HD</span>
-                        
-                        </section>
-                        <span class="netflix-card-text text-white">Romance • Drama • Japan</span>
-                  </div>
-                  </div>
-                </section>
-              </div>
-             
+            <div class="col-md-3">
+              <ul>
+                <li>Audio Description</li>
+                <li>Investor Relations</li>
+                <li>Terms of Service</li>
+                <li>News</li>
+              </ul>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden ">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next
-              </span>
-            </button>
-          </div>
-        </div>
-        <div class="container-fluid  slide3">
-          <section class="d-flex justify-content-between margin-right margin-title2">
-            <p class="text-white"> <b>Trending</b> </p>
-            <div class="">
-              <button  type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active tab-change-btn" aria-current="true" aria-label="Slide 1"></button>
-              <button class="tab-change-btn" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button class="tab-change-btn" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <div class="col-md-3">
+              <ul>
+                <li>Help Center</li>
+                <li>Careers</li>
+              </ul>
             </div>
-          </section>
-          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-      
-            <div class="carousel-inner" style="position: relative; overflow: visible;">
-              <div class="carousel-item active">
-                <section class="d-flex " >
-                  <div class="card" >
-                    <img src="./images/suggested/imgab1.jpg" class="card-img-top" alt="...">
-                    <div class="card-body"> 
-                        <section class="d-flex justify-content-between">
-                          <div>
-                            <i class="bi bi-play-circle-fill card-icon"  ></i>
-                            <i  class="bi bi-plus-circle card-icon"></i>
-                          </div>
-                          <div>
-                            <i class="bi bi-arrow-down-circle card-icon"></i>
-                          </div>
-                        </section>
-                        <section class="d-flex align-items-center justify-content-between" >
-                           <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% Relevent</p> 
-                             <span class="m-2 netflix-card-text text-white">Limited Series</span> <span class="border netflix-card-text p-1 text-white">HD</span>
-                          
-                          </section>
-                          <span class="netflix-card-text text-white">Romance • Drama • Comédia</span>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <img src="./images/suggested/imgab2.jpg" class="card-img-top" alt="...">
-                    <div class="card-body"> 
-                      <section class="d-flex justify-content-between">
-                        <div>
-                          <i class="bi bi-play-circle-fill card-icon"  ></i>
-                          <i  class="bi bi-plus-circle card-icon"></i>
-                        </div>
-                        <div>
-                          <i class="bi bi-arrow-down-circle card-icon"></i>
-                        </div>
-                      </section>
-                      <section class="d-flex align-items-center justify-content-between" >
-                         <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% Relevent</p> 
-                           <span class="m-2 netflix-card-text text-white">Limited Series</span> <span class="border netflix-card-text p-1 text-white">HD</span>
-                        
-                        </section>
-                        <span class="netflix-card-text text-white">Romance • Drama • Comédia</span>
-                  </div>
-                  </div>
-                  <div class="card">
-                    <img src="./images/suggested/imgab3.jpg" class="card-img-top" alt="...">
-                    <div class="card-body"> 
-                      <section class="d-flex justify-content-between">
-                        <div>
-                          <i class="bi bi-play-circle-fill card-icon"  ></i>
-                          <i  class="bi bi-plus-circle card-icon"></i>
-                        </div>
-                        <div>
-                          <i class="bi bi-arrow-down-circle card-icon"></i>
-                        </div>
-                      </section>
-                      <section class="d-flex align-items-center justify-content-between" >
-                         <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% Relevent</p> 
-                           <span class="m-2 netflix-card-text text-white">Limited Series</span> <span class="border netflix-card-text p-1 text-white">HD</span>
-                        
-                        </section>
-                        <span class="netflix-card-text text-white">Romance • Drama • Comédia</span>
-                  </div> <div class="card-body"> 
-                        <section class="d-flex justify-content-between">
-                          <div>
-                            <i class="bi bi-play-circle-fill card-icon"  ></i>
-                            <i  class="bi bi-plus-circle card-icon"></i>
-                          </div>
-                          <div>
-                            <i class="bi bi-arrow-down-circle card-icon"></i>
-                          </div>
-                        </section>
-                        <section class="d-flex align-items-center justify-content-between" >
-                           <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% Relevent</p> 
-                             <span class="m-2 netflix-card-text text-white">Limited Series</span> <span class="border netflix-card-text p-1 text-white">HD</span>
-                          
-                          </section>
-                          <span class="netflix-card-text text-white">Romance • Drama • Comédia</span>
-                    </div>
-                  </div>
-                  <div class="card" >
-                    <img src="./images/suggested/imagb5.jpg" class="card-img-top" alt="...">
-                    <div class="card-body"> 
-                      <section class="d-flex justify-content-between">
-                        <div>
-                          <i class="bi bi-play-circle-fill card-icon"></i>
-                          <i  class="bi bi-plus-circle card-icon"></i>
-                        </div>
-                        <div>
-                          <i class="bi bi-arrow-down-circle card-icon"></i>
-                        </div>
-                      </section>
-                      <section class="d-flex align-items-center justify-content-between" >
-                         <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% Relevent</p> 
-                           <span class="m-2 netflix-card-text text-white">Limited Series</span> <span class="border netflix-card-text p-1 text-white">HD</span>
-                        
-                        </section>
-                        <span class="netflix-card-text text-white">Romance • Drama • Comédia</span>
-                  </div>
-                  </div>
-                  <div class="card" >
-                    <img src="./images/suggested/imagb4.jpg" class="card-img-top" alt="...">
-                    <div class="card-body"> 
-                      <section class="d-flex justify-content-between">
-                        <div>
-                          <i class="bi bi-play-circle-fill card-icon"  ></i>
-                          <i  class="bi bi-plus-circle card-icon"></i>
-                        </div>
-                        <div>
-                          <i class="bi bi-arrow-down-circle card-icon"></i>
-                        </div>
-                      </section>
-                      <section class="d-flex align-items-center justify-content-between" >
-                         <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% Relevent</p> 
-                           <span class="m-2 netflix-card-text text-white">Limited Series</span> <span class="border netflix-card-text p-1 text-white">HD</span>
-                        
-                        </section>
-                        <span class="netflix-card-text text-white">Romance • Drama • Comédia</span>
-                  </div>
-                  </div>
-                  <div class="card" >
-                    <img src="./images/suggested/imgab6.jpg" class="card-img-top" alt="...">
-                    <div class="card-body"> 
-                      <section class="d-flex justify-content-between">
-                        <div>
-                          <i class="bi bi-play-circle-fill card-icon"  ></i>
-                          <i  class="bi bi-plus-circle card-icon"></i>
-                        </div>
-                        <div>
-                          <i class="bi bi-arrow-down-circle card-icon"></i>
-                        </div>
-                      </section>
-                      <section class="d-flex align-items-center justify-content-between" >
-                         <p class="netflix-card-text m-0" style="color: rgb(0, 186, 0);">97% Relevent</p> 
-                           <span class="m-2 netflix-card-text text-white">Limited Series</span> <span class="border netflix-card-text p-1 text-white">HD</span>
-                        
-                        </section>
-                        <span class="netflix-card-text text-white">Romance • Drama • Comédia</span>
-                  </div>
-                  </div>
-                </section>
-              </div>
-             
+            <div class="col-md-3">
+              <ul>
+                <li>Gift Card</li>
+                <li>Subscribe</li>
+              </ul>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Forecast</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
           </div>
         </div>
       </div>
-      <!-- sliders-end -->
-
-
-      <!-- footer  -->
-      <div class="container footer">
-        <div class="row">
-           <div class="col-md-10 mx-auto">
-              <div class="row">
-                 <div class="col-md-3">
-                    <ul>
-                       <li>Audio and Subtitles</li>
-                       <li>Media Center</li>
-                       <li>Privacy</li>
-                       <li>Contact</li>
-                    </ul>
-                 </div>
-                 <div class="col-md-3">
-                    <ul>
-                       <li>Audio Description</li>
-                       <li>Investor Relations</li>
-                       <li>Terms of Service</li>
-                       <li>News</li>
-                    </ul>
-                 </div>
-                 <div class="col-md-3">
-                    <ul>
-                       <li>Help Center</li>
-                       <li>Careers</li>
-                    </ul>
-                 </div>
-                 <div class="col-md-3">
-                    <ul>
-                       <li>Gift Card</li>
-                       <li>Subscribe</li>
-                    </ul>
-                 </div>
-              </div>
-           </div>
+      <div class="row">
+        <div class="col-10 mx-auto">
+          <div class="row">
+            <div class="col">
+              <p class="copy-right">@netflix copyright</p>
+            </div>
+          </div>
         </div>
-        <div class="row">
-           <div class="col-10 mx-auto">
-              <div class="row">
-                 <div class="col">
-                    <p class="copy-right">@netflix copyright</p>
-                 </div>
-              </div>
-           </div>
-        </div>
-     </div>
-     
-
+      </div>
     </div>
 
-    
 
-    <!--   Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </div>
 
 
 
-    <script src="./javaScript.js"></script>
-  </body>
+  <!--   Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+
+
+  <script src="./javaScript.js"></script>
+</body>
+
 </html>

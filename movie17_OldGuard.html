@@ -42,27 +42,27 @@
     </div>
     <script>
         const movies = [
-        {
-        movieTitle: "The Old Guard",
-        genres: ["Action", "Fantasy"],
-        yearOfRelease: 2020,
-        duration: "2 hours 5 minutes",
-        rating: 6.6,
-        imgPoster: "theoldguard.jpg",
-        country: "USA",
-        production: "Skydance Media, Denver and Delilah Productions, Netflix",
-        cast: "Charlize Theron, KiKi Layne, Matthias Schoenaerts, Marwan Kenzari",
-        moviesummary: "A covert team of immortal mercenaries is suddenly exposed and must now fight to keep their identity a secret just as an unexpected new member is discovered."
-    }
+            {
+                movieTitle: "The Old Guard",
+                genres: ["Action", "Fantasy"],
+                yearOfRelease: 2020,
+                duration: "2 hours 5 minutes",
+                rating: 6.6,
+                imgPoster: "./description_pg_imgs/old-guard.jpg",
+                country: "USA",
+                production: "Skydance Media, Denver and Delilah Productions, Netflix",
+                cast: "Charlize Theron, KiKi Layne, Matthias Schoenaerts, Marwan Kenzari",
+                moviesummary: "A covert team of immortal mercenaries is suddenly exposed and must now fight to keep their identity a secret just as an unexpected new member is discovered."
+            }
         ];
-    
+
         function aboutMovie(movie) {
             document.querySelector('.descp h2').innerText = movie.movieTitle;
             document.getElementById('g1').innerText = movie.genres[0];
             document.getElementById('g2').innerText = movie.genres[1];
             document.querySelector('.poster_grid1 img').src = movie.imgPoster;
             document.querySelector('.poster_grid1 img').alt = "INCEPTION";
-    
+
             const details = document.querySelector('.details');
             const detailsHTML = `
                 <p id="g1">${movie.genres[0]}</p>
@@ -75,9 +75,9 @@
                 <p>${movie.rating}</p>
             `;
             details.innerHTML = detailsHTML;
-    
+
             document.querySelector('.summary').innerText = movie.moviesummary;
-    
+
             const details2 = document.querySelector('.details2');
             const details2HTML = `
                 <p>Country: ${movie.country}</p>
@@ -85,13 +85,11 @@
                 <p>Date Release: November 5, ${movie.yearOfRelease}</p>
                 <p>Production: ${movie.production}</p>
                 <p>Cast: ${movie.cast}</p>
-            `;       
+            `;
             details2.innerHTML = details2HTML;
         }
-    
-        document.addEventListener("DOMContentLoaded", function(){
+
+        document.addEventListener("DOMContentLoaded", function () {
             aboutMovie(movies[0]);
         });
     </script>
-    
-    
